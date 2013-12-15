@@ -16,3 +16,5 @@ TODO
 
 How it works:
 TODO
+
+TODO: another endpoint for closing the admin hole.
