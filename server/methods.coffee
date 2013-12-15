@@ -1,4 +1,4 @@
-HoustonHook = new Meteor.Collection("_houston_hook")
+HoustonHook = new Meteor.Collection("houston_hook")
 Fiber = Npm.require('fibers')
 
 Meteor.startup ->
@@ -12,7 +12,7 @@ Meteor.startup ->
       if hook_exists
         res.writeHead(403)
         # TODO now as nice of an error message in debug
-        res.end("Houston already set up - db.getCollection('_houston_hook').remove() to remove")
+        res.end("Houston already set up - db.houston_hook.remove() to remove")
       else
         console.log "pre insert"
         hook_log = _.chain(req).pick("url", "headers", "method").extend(
